@@ -20,6 +20,10 @@
   --cinza:    #2A2A25;
   --cinza-cl: #888880;
 }
+html {
+  /* Aumenta o tamanho base para 112.5% (~18px), tornando tudo maior */
+  font-size: 112.5%;
+}
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior: smooth; }
@@ -92,8 +96,8 @@ body::before {
 }
 
 .hero-photo-frame {
-  width: 270px;
-  height: 270px;
+  width: 330px;
+  height: 330px;
   border-radius: 44% 56% 52% 48% / 46% 44% 56% 54%;
   overflow: hidden;
   border: 3px solid var(--musgo);
@@ -140,6 +144,7 @@ body::before {
   line-height: 1.0;
   letter-spacing: -1px;
   margin-bottom: 4px;
+  margin-top: 40px;
   animation: fadeUp 0.6s ease 0.3s both;
 }
 .hero-title .nome {
@@ -192,7 +197,7 @@ body::before {
   display: flex; align-items: center; justify-content: center;
   font-size: 13px;
 }
-
+/* deletando a animacao do mouse
 .hero-scroll {
   position: absolute;
   bottom: 28px;
@@ -232,7 +237,7 @@ body::before {
   background: linear-gradient(to bottom, rgba(247,244,238,0.5), transparent);
   margin-top: 4px;
 }
-
+/*
 /* ══ PILARES ═════════════════════════ */
 #pilares {
   background: var(--branco);
@@ -843,7 +848,7 @@ footer {
 
   <div class="hero-photo-wrap">
     <div class="hero-photo-frame">
-      <img src="perfil3.png" alt="Camila Fernandes" />
+      <img src="perfil2.jpg" alt="Camila Fernandes" />
     </div>
     <span class="photo-tag pt-1">CRN · 12345 ✿</span>
     <span class="photo-tag pt-2">♡ olá!</span>
@@ -860,10 +865,6 @@ footer {
     <span class="arr">→</span>
   </a>
 
-  <div class="hero-scroll">
-    <div class="mouse-icon"><div class="mouse-wheel"></div></div>
-    <div class="mouse-legs"></div>
-  </div>
 </section>
 
 
@@ -903,7 +904,7 @@ footer {
       <div class="sobre-deco"></div>
       <div class="sobre-photo-outer">
         <div class="sobre-photo-frame">
-          <img src="perfil2.jpg" alt="Camila Fernandes" />
+          <img src="perfil3.png" alt="Camila Fernandes" />
         </div>
         <div class="sobre-sticker">
           <span class="big">+500</span>
