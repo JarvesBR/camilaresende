@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Camila Fernandes · Nutricionista</title>
+<title>Camila Resende · Nutricionista</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700;1,9..144,900&family=Caveat:wght@400;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;1,400&family=Pacifico&display=swap" rel="stylesheet">
 
@@ -818,7 +818,7 @@ footer {
   .rec-card:first-child .rec-title { font-size: 1.4rem; }
 
   .sobre-inner { grid-template-columns: 1fr; gap: 50px; }
-  .sobre-photo-outer { width: 250px; margin: 0 auto; }
+  .sobre-photo-outer { width: 350px; margin: 0 auto; }
   .sobre-deco { display: none; }
 
   #pilares, #sobre, #metodologia, #receitas, #depoimentos, #cta {
@@ -838,6 +838,17 @@ footer {
   .rec-grid { grid-template-columns: 1fr; }
   .rec-card:first-child { grid-column: auto; }
 }
+/* ANIMAÇÕES DE SCROLL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1),
+                transform 0.8s cubic-bezier(0.22,1,0.36,1);
+  }
+  .reveal.from-left  { transform: translateX(-40px); }
+  .reveal.from-right { transform: translateX(40px); }
+  .reveal.scale-in   { transform: scale(0.9) translateY(10px); }
+  .reveal.visible    { opacity: 1; transform: none; }
 </style>
 </head>
 <body>
@@ -848,19 +859,19 @@ footer {
 
   <div class="hero-photo-wrap">
     <div class="hero-photo-frame">
-      <img src="perfil2.jpg" alt="Camila Fernandes" />
+      <img src="perfil2.jpg" alt="Camila Resende" />
     </div>
     <span class="photo-tag pt-1">CRN · 12345 ✿</span>
     <span class="photo-tag pt-2">♡ olá!</span>
   </div>
 
   <h1 class="hero-title">
-    <span class="nome">Camila</span><em>Fernandes</em>
+    <span class="nome">Camila</span><em>Resende</em>
   </h1>
 
   <p class="hero-sub">comer bem é um ato de amor próprio 🌿</p>
 
-  <a href="https://wa.me/55" class="btn-agendar" target="_blank">
+  <a href="https://wa.me/5519981169792" class="btn-agendar" target="_blank">
     Agendar Avaliação
     <span class="arr">→</span>
   </a>
@@ -870,24 +881,32 @@ footer {
 
 <!-- ══ PILARES ════════════════════════════════════════ -->
 <section id="pilares">
-  <div class="s-tag">como posso te ajudar</div>
-  <h2 class="s-title">Uma nutrição<br><em>que é sua</em></h2>
-  <p class="s-desc">Nada de dieta copiada da internet. Tudo pensado no seu corpo, na sua rotina e nos seus sonhos.</p>
+  <!-- O título e a descrição surgem subindo suavemente -->
+  <div class="s-tag reveal">como posso te ajudar</div>
+  <h2 class="s-title reveal">Uma nutrição<br><em>que é sua</em></h2>
+  <p class="s-desc reveal">Nada de dieta copiada da internet. Tudo pensado no seu corpo, na sua rotina e nos seus sonhos.</p>
 
   <div class="pillars-grid">
-    <div class="pillar-card">
+    <!-- Os cards podem vir de direções diferentes ou com atrasos -->
+    
+    <!-- Card 1: Vem da esquerda -->
+    <div class="pillar-card reveal from-left" style="transition-delay: 0.1s;">
       <div class="p-num">01</div>
       <div class="p-icon">🥗</div>
       <h3 class="p-title">Alimentação Funcional</h3>
       <p class="p-text">Planos que respeitam seu gosto e sua correria — porque comer bem não precisa ser sacrifício.</p>
     </div>
-    <div class="pillar-card">
+
+    <!-- Card 2: Apenas sobe (padrão) -->
+    <div class="pillar-card reveal" style="transition-delay: 0.3s;">
       <div class="p-num">02</div>
       <div class="p-icon">🌸</div>
       <h3 class="p-title">Saúde Hormonal</h3>
       <p class="p-text">Abordagem que considera como os hormônios afetam sua energia, humor e composição corporal.</p>
     </div>
-    <div class="pillar-card">
+
+    <!-- Card 3: Vem da direita -->
+    <div class="pillar-card reveal from-right" style="transition-delay: 0.5s;">
       <div class="p-num">03</div>
       <div class="p-icon">♻️</div>
       <h3 class="p-title">Reeducação Alimentar</h3>
@@ -903,8 +922,8 @@ footer {
     <div class="sobre-photo-wrap">
       <div class="sobre-deco"></div>
       <div class="sobre-photo-outer">
-        <div class="sobre-photo-frame">
-          <img src="perfil3.png" alt="Camila Fernandes" />
+        <div class="sobre-photo-frame reveal"style="transition-delay: 0.5s;">
+          <img src="perfil3.png" alt="Camila Resende" />
         </div>
         <div class="sobre-sticker">
           <span class="big">+500</span>
@@ -972,9 +991,9 @@ footer {
       <div class="s-tag">conteúdo & receitas</div>
       <h2 class="s-title">Saúde <em>com sabor</em></h2>
     </div>
-    <a href="#" class="btn-g" target="_blank">
+    <a href="https://www.instagram.com/nutricamilaresende/" class="btn-g" target="_blank">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-      @camilafernandes
+      @camilaresende  
     </a>
   </div>
 
@@ -1016,7 +1035,7 @@ footer {
       <h3>Tem muito mais no Instagram 🌿</h3>
       <p>Receitas práticas, dicas e bastidores do consultório toda semana.</p>
     </div>
-    <a href="#" class="btn-g" target="_blank">
+    <a href="https://www.instagram.com/nutricamilaresende/" class="btn-g" target="_blank">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
       Seguir agora
     </a>
@@ -1066,12 +1085,12 @@ footer {
     <h2 class="cta-title">Sua versão mais<br><em>saudável</em> te espera</h2>
     <p class="cta-p">Agende sua avaliação e dê o primeiro passo. Sem dieta maluca, sem sofrimento — com ciência e carinho.</p>
     <div class="cta-btns">
-      <a href="https://wa.me/55" class="btn-w" target="_blank">
+      <a href="https://wa.me/5519981169792" class="btn-w" target="_blank">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Agendar pelo WhatsApp
       </a>
-      <a href="https://instagram.com/" class="btn-gw" target="_blank">
-        Me seguir no Instagram
+      <a href="https://www.instagram.com/nutricamilaresende/" class="btn-gw" target="_blank">
+        Seguir no Instagram
       </a>
     </div>
   </div>
@@ -1080,9 +1099,22 @@ footer {
 
 <!-- ══ FOOTER ═════════════════════════════════════════ -->
 <footer>
-  <div class="f-brand">Camila <em>Fernandes</em></div>
+  <div class="f-brand">Camila <em>Resende</em></div>
   <div class="f-copy">© 2025 · Nutricionista · Todos os direitos reservados</div>
 </footer>
+<script>
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
+  document.querySelectorAll('.reveal').forEach(function(el) {
+    observer.observe(el);
+  });
+</script>
 </body>
 </html>
